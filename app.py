@@ -2,7 +2,7 @@
 app.py  –  Movie Recommendation System  (no Surprise dependency)
 Run with:  streamlit run app.py
 """
-
+import download_models
 import streamlit as st
 import pandas as pd
 import numpy as np
