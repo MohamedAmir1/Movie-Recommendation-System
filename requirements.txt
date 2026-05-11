@@ -5,3 +5,4 @@ scipy>=1.9
 streamlit>=1.30
 matplotlib>=3.6
 seaborn>=0.12
+gdown
