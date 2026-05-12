@@ -1,5 +1,9 @@
 import gdown
 import os
+import zipfile
+
+MODEL_DIR = "models"
+os.makedirs(MODEL_DIR, exist_ok=True)
 
 FILES = {
     "svd_artefacts.pkl": "1HCQHa3sdpixJgXBQ4WoDEB-DDIkMH8RA",
@@ -11,12 +15,14 @@ FILES = {
 
 for filename, file_id in FILES.items():
 
-    if not os.path.exists(filename):
+    path = os.path.join(MODEL_DIR, filename)
+
+    if not os.path.exists(path):
 
         url = f"https://drive.google.com/uc?id={file_id}"
 
         print(f"Downloading {filename}...")
 
-        gdown.download(url, filename, quiet=False)
+        gdown.download(url, path, quiet=False)
 
-print("All files downloaded.")
+print("All models downloaded into /models")
