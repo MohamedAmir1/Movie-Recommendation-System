@@ -6,8 +6,8 @@ MODEL_DIR = "models"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 FILES = {
-    "svd_artefacts.pkl": "1HCQHa3sdpixJgXBQ4WoDEB-DDIkMH8RA",
-    "cosine_sim.pkl": "15dh1qmFnqE23Gj-zJfcXbjbCASpHsojG",
+    # "svd_artefacts.pkl": "1HCQHa3sdpixJgXBQ4WoDEB-DDIkMH8RA",
+    # "cosine_sim.pkl": "15dh1qmFnqE23Gj-zJfcXbjbCASpHsojG",
     "movies.pkl": "1VR5vBKUGsFtQ6G7wainTWe6t_kMW5ywN",
     "ratings.pkl": "1Znhjb9bVEeB6za7FXm4dg1OfaNCiEKXu",
     "cb_data.pkl": "1JBFHI8TY6jyFIMhFkFH8gQOFO4bmlZ8a"
