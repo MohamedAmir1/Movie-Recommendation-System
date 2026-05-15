@@ -34,7 +34,7 @@ REQUIRED = ["svd_artefacts.pkl", "cosine_sim.pkl", "cb_data.pkl", "movies.pkl", 
 
 @st.cache_resource(show_spinner="Loading models...")
 def load_models():
-    base = Path("download_models")
+    base = Path("models")
     with open(base / "svd_artefacts.pkl", "rb") as f:
         svd = pickle.load(f)          # dict with R_predicted, user2idx, movie2idx …
     with open(base / "cosine_sim.pkl", "rb") as f:
@@ -43,7 +43,7 @@ def load_models():
     movies   = pd.read_pickle(base / "movies.pkl")
     ratings  = pd.read_pickle(base / "ratings.pkl")
     return svd, cos_sim, cb_data, movies, ratings
-base = Path("download_models")
+base = Path("models")
 
 models_ready = all((base / fn).exists() for fn in REQUIRED)
 # ── Prediction helper ──────────────────────────────────────────────────────────
